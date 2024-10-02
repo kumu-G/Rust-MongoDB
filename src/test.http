@@ -1,0 +1,27 @@
+### books_list_handler
+GET http://localhost:8080/book HTTP/1.1
+
+### create_book_handler
+POST http://localhost:8080/book HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "book_name",
+    "author": "F. Scott Fitzgerald",
+    "num_pages": 1925,
+    "tags": ["tag1", "tag2", "tag3"]
+}
+
+### edit_book_handler
+PUT http://localhost:8080/book/6512e64acc700549579f95a3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "book_name_edit",
+    "author": "xiao qiao",
+    "num_pages": 68,
+    "tags": ["tag1", "tag2"]
+}
+
+### delete_book_handler
+DELETE http://localhost:8080/book/6512da63cc700549579f95a2 HTTP/1.1
